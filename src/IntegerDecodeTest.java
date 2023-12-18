@@ -16,11 +16,13 @@ public class IntegerDecodeTest {
     @Test()
     public void testHex() {
         Assertions.assertEquals(Main.decode("0x22B"), 555);
+        Assertions.assertEquals(Main.decode("#22B"), 555);
     }
 
     @Test()
     public void testNegativeHex() {
         Assertions.assertEquals(Main.decode("-0x22B"), -555);
+        Assertions.assertEquals(Main.decode("-#22B"), -555);
     }
 
     @Test()
